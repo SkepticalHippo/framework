@@ -108,6 +108,7 @@ class PhpRedisConnector
      */
     protected function establishPersistentConnection($client, array $config)
     {
+        var_dump('persistent: '.Arr::get($config, 'persistent_id', null));
         $client->pconnect(
             $config['host'],
             $config['port'],
