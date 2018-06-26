@@ -578,8 +578,7 @@ class RedisConnectionTest extends TestCase
      */
     public function it_persists_connection()
     {
-        var_dump($redisVersion = $this->connections()['persistent']->command('info')['redis_version']);
-        
+        var_dump(PHP_ZTS);
         $this->assertEquals(
             'laravel',
             $this->connections()['persistent']->getPersistentID()
